@@ -6,6 +6,7 @@ public class RotateRoom : MonoBehaviour {
 	public Transform targetRoom;
 	public int initRotation = 0;
 
+    private Quaternion targetRotation;
 	private bool playerOn = false;
 
 	void Awake()
@@ -50,16 +51,24 @@ public class RotateRoom : MonoBehaviour {
 	{
 		initRotation = (initRotation + 1) % 4;
 		targetRoom.rotation = Quaternion.Euler (0, 0, initRotation * -90);
-		//StartCoroutine("AnimateRotation");
+        //StopAllCoroutines();
+        //StartCoroutine( "AnimateRotation", Quaternion.Euler(0, 0, initRotation * -90) );
 	}
 
-	/*IEnumerator AnimateRotation()
+	IEnumerator AnimateRotation( Quaternion targetRotation )
 	{
 		float initTime = Time.time;
+        float duration = 1;
+        Quaternion initRotation = transform.rotation;
 		while(true)
 		{
+            float percent = duration == 0 ? 1 : Mathf.Min(1, (Time.time - initTime) / duration);
+            transform.rotation = Quaternion.Lerp(initRotation, targetRotation, percent);
 			targetRoom.Rotate(0, 0, 9900.8f * Time.deltaTime);
-			yield return null;
+            if (percent == 1)
+                break;
+            else
+			    yield return null;
 		}
-	}*/
+	}
 }

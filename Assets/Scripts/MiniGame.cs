@@ -106,9 +106,19 @@ public class MiniGame : MonoBehaviour {
 
 	public void Shuffle()
 	{
-		game = Shuffle<int>(game);
+        //game = Shuffle<int>(game);
 		//game[2] = 1;
 		//game[1] = 2;
+
+        //more simple:
+        /*int index;
+        do
+        {
+            index = UnityEngine.Random.Range(0, game.Length);
+        } while (index == 2);
+        game[2] = index;
+        game[index] = 2;*/
+
 		ApplyInView();
 	}
 

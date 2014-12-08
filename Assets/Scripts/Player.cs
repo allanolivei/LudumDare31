@@ -53,7 +53,7 @@ public class Player : StateMachine {
 			abstinence = -1;
 		}
 
-		abstinence = Mathf.Clamp ( abstinence + (currentState.Equals(STATES.SIT) ? -0.25f : +0.08f) * Time.deltaTime, -1, 1 );
+		abstinence = Mathf.Clamp ( abstinence + (currentState.Equals(STATES.SIT) ? -0.25f : +0.06f) * Time.deltaTime, -1, 1 );
 		CheckIsGround ();
 		base.Update ();
 	}

@@ -47,7 +47,7 @@ public class RotateRoom : MonoBehaviour {
 			playerOn = false;
 	}
 
-	void Rotate()
+	public void Rotate()
 	{
 		initRotation = (initRotation + 1) % 4;
 		targetRoom.rotation = Quaternion.Euler (0, 0, initRotation * -90);

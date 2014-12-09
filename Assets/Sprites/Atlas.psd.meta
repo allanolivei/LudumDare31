@@ -82,6 +82,8 @@ TextureImporter:
     21300154: Plaque_06
     21300156: Plaque_05
     21300158: Tip
+    21300160: Atlas_71
+    21300162: Arrow_Rot
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -832,6 +834,26 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas_71
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_Rot
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
